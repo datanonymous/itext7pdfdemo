@@ -32,7 +32,7 @@ slf4j simple
 // https://www.tutorialspoint.com/itext/index.htm
  */
 
-// testing merge
+// testing Commit
 
 public class HelloWorld {
 
@@ -66,6 +66,44 @@ public class HelloWorld {
 
 
 
+        // Adding a list
+        // Creating a list
+        List list = new List();
+
+        // Add elements to the list
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.add("e");
+        list.add("f");
+        list.add("g");
+        list.add("h");
+
+        // Adding list to the document
+        document.add(list);
+
+
+
+        // Creating a line
+        // Creating a new page
+        PdfPage pdfPage = pdf.addNewPage();
+
+        // Creating a PdfCanvas object
+        PdfCanvas canvas = new PdfCanvas(pdfPage);
+
+        // Initial point of the line
+        canvas.moveTo(100, 300);
+
+        // Drawing the line
+        canvas.lineTo(500, 300);
+
+        // Closing the path stroke
+        canvas.closePathStroke();
+
+
+
+
         // Creating an Area Break
         AreaBreak aB = new AreaBreak();
 
@@ -73,22 +111,8 @@ public class HelloWorld {
         document.add(aB);
 
 
-        // Adding a list
-        // Creating a list
-        List list = new List();
 
-        // Add elements to the list
-        list.add("Java");
-        list.add("JavaFX");
-        list.add("Apache Tika");
-        list.add("OpenCV");
-        list.add("WebGL");
-        list.add("Coffee Script");
-        list.add("Java RMI");
-        list.add("Apache Pig");
 
-        // Adding list to the document
-        document.add(list);
 
 
 
@@ -109,21 +133,7 @@ public class HelloWorld {
 
 
 
-        // Creating a line
-        // Creating a new page
-        PdfPage pdfPage = pdf.addNewPage();
 
-        // Creating a PdfCanvas object
-        PdfCanvas canvas = new PdfCanvas(pdfPage);
-
-        // Initial point of the line
-        canvas.moveTo(100, 300);
-
-        // Drawing the line
-        canvas.lineTo(500, 300);
-
-        // Closing the path stroke
-        canvas.closePathStroke();
 
 
 
