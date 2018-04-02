@@ -32,6 +32,8 @@ slf4j simple
 // https://www.tutorialspoint.com/itext/index.htm
  */
 
+// testing merge
+
 public class HelloWorld {
 
     public static final String DEST="results/chapter01/hello_world.pdf";
