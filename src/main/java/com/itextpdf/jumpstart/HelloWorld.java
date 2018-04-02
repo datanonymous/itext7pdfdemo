@@ -5,15 +5,13 @@ import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.color.Color;
 import com.itextpdf.kernel.font.PdfFontFactory;
+import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfPage;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
 import com.itextpdf.layout.Document;
-import com.itextpdf.layout.element.AreaBreak;
-import com.itextpdf.layout.element.Image;
-import com.itextpdf.layout.element.List;
-import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.element.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -62,9 +60,11 @@ public class HelloWorld {
         // Change the color
         document.add(new Paragraph("This is a second paragraph!").setFontColor(Color.BLUE));
 
+        // Paragraphs will loop to the beginning of the page
         document.add(new Paragraph("This is the third paragraph! asdfasdf dasdadsfdskj;aolwehfjoaiheswf;olijaf;olaifjdjifdo;asdkjisf;oaijdef;oai j;alsdkjf;l kflkjasd;lfkj;asldkjf;lasjdf;lkjasd;flkjasd;lfkjasd;lfkj;lasdkjffjeo;awifjo;awifjdskif"));
 
-
+        // Adding a line?
+        document.add(new Paragraph("_______________________________________________").setFontColor(Color.RED));
 
         // Adding a list
         // Creating a list
@@ -100,6 +100,12 @@ public class HelloWorld {
 
         // Closing the path stroke
         canvas.closePathStroke();
+
+
+
+        // https://developers.itextpdf.com/examples/itext-action-second-edition/chapter-2#103-directoroverview3.java
+        // how to add a line separator?
+
 
 
 
